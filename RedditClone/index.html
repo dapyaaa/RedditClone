@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Reddit</title>
+    </head>
+  <body>
+  <div class="header">
+    <img alt="Reddit logo" height="40" src="https://storage.googleapis.com/a1aa/image/dMtr59DriVKRE1KYNjiGY5f6Pb5Oe8NXQqzGzZcprsiWOywTA.jpg" width="40"/>
+    <a href="index.html"><h1>RedditClone</h1></a>
+    <div class="search-bar">
+     <input placeholder="Search" type="text"/>
+    </div>
+   </div>
+   <div class="content">
+    <div class="main-content" id="main-content">
+     <div class="post">
+      <div class="post-votes">
+       <i class="fas fa-arrow-up">
+       </i>
+       <span>
+        23.1k
+       </span>
+       <i class="fas fa-arrow-down">
+       </i>
+      </div>
+      <div class="post-title">
+       Welcome to Reddit, Have a nice day 
+      </div>
+      <img alt="Reddit" height="400" src="reddits post.png" width="600"/>
+     </div>
+    </div>
+    <div class="sidebar">
+     <h2>
+      Subreddits
+     </h2>
+     <ul class="subreddit-list">
+      <li>
+       <img alt="Home icon" height="30" src="https://storage.googleapis.com/a1aa/image/RehoGfvZoGgeKJLrnjL6wkvOJl9MMjA9AGj5ZNrCksPvckhnA.jpg" width="30"/>
+       <button onclick="changeContent('Politics')">
+        Politics
+       </button>
+      </li>
+      <li>
+       <img alt="PS5 icon" height="30" src="logo ps5.png" width="30"/>
+       <button onclick="changeContent('PS5')">
+        PS5
+       </button>
+      </li>
+      <li>
+       <img alt="Movie icon" height="30" src="logo movie.png" width="30"/>
+       <button onclick="changeContent('Movie')">
+        Movie
+       </button>
+      </li>
+      <li>
+       <img alt="Meme icon" height="30" src="https://storage.googleapis.com/a1aa/image/g2dWnM0zUzLeBSG5WsUN8pCTzE8IkbpI5UvfmRcYrqdPOywTA.jpg" width="30"/>
+       <button onclick="changeContent('Meme')">
+        Meme
+       </button>
+      </li>
+      <li>
+       <img alt="football icon" height="30" src="logo football.png" width="30"/>
+       <button onclick="changeContent('Football')">
+        Football
+       </button>
+      </li>
+      <li>
+       <img alt="interestingasfuck icon" height="30" src="logo game.jpg" width="30"/>
+       <button onclick="changeContent('Game')">
+        Game
+       </button>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <script>
+    function changeContent(subreddit) {
+    var mainContent = document.getElementById('main-content');
+    var content = '';
+    switch (subreddit) {
+        case 'Politics':
+            content = `
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>77.1k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title">Prabowo has become President</div>
+                    <img src="reddits politik.png" alt="Prabowo subreddit image">
+                </div>
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>100.9k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title">Donald Trump returns as president after defeating Kamala Harris</div>
+                    <img src="reddits politik2.png" alt="Politics subreddit image">
+                </div>
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>54.6k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title">Tom Lembong was arrested on suspicion of importing sugar</div>
+                    <img src="reddits politik3.png" alt="Politics subreddit image">
+                </div>
+            `;
+            break;
+        case 'PS5':
+            content = `
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>15.2k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title">PS5 has been officially released</div>
+                    <img src="reddits ps5.png" alt="PS5 subreddit image">
+                </div>
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>60.4k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title">PS5 VS PC, Who's Better?</div>
+                    <img src="reddits ps5-2.png" alt="PS5 subreddit image">
+                </div>
+
+            `;
+            break;
+        case 'Movie':
+            content = `
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>8.4k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title">Avengers: Doomsday Will be released in 2026</div>
+                    <img src="reddits movie.png" alt="Movie subreddit image">
+                </div>
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>8.4k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title">Are all conjuring films true stories?</div>
+                    <img src="reddits movie-2.png" alt="Movie subreddit image">
+                </div><div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>4.7k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title">A man became gentle again after seeing the film Siksa Kubur</div>
+                    <img src="reddits movie-3.png" alt="Movie subreddit image">
+                </div>
+            `;
+            break;
+        case 'Meme':
+            content = `
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>44.3k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title"></div>
+                    <img src="reddits meme.png" alt="Meme subreddit image">
+                </div>
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>98.7k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title"></div>
+                    <img src="reddits meme-2.png" alt="Meme subreddit image">
+                </div>
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>151.0k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title"></div>
+                    <img src="reddits meme-3.png" alt="Meme subreddit image">
+                </div>
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>133.4k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title"></div>
+                    <img src="reddits meme-4.png" alt="Meme subreddit image">
+                </div>
+            `;
+            break;
+        case 'Football':
+            content = `
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>200.7k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title">Erik Ten Hag was fired from Manchester United</div>
+                    <img src="reddits football.png" alt="Football subreddit image">
+                </div>
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>175.7k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title">Rodri wins the 2024 Ballon D'or</div>
+                    <img src="reddits football-2.png" alt="Football subreddit image">
+                </div>
+            `;
+            break;
+        case 'Game':
+            content = `
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>655.5k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title">Rockstar Games will release GTA 6</div>
+                    <img src="reddits game.png" alt="Game subreddit image">
+                </div>
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>375.8k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title">Black Myth Wukong Breaks Record on Steam as All Time Peak Black Myth Wukong reaches 2,415,714 players</div>
+                    <img src="reddits game-2.png" alt="Game subreddit image">
+                </div>
+            `;
+            break;
+        default:
+            content = `
+                <div class="post">
+                    <div class="post-votes">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>23.1k</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <div class="post-title">President-Elect Trump, President Biden, and Dr. Jill Biden posing outside of the White House.</div>
+                    <img src="https://storage.googleapis.com/a1aa/image/cGZxNjnf4h1kKiewRklDW42ROL4pEhFwf6C8Upwbgt0jckhnA.jpg" alt="President-Elect Trump, President Biden, and Dr. Jill Biden posing outside of the White House.">
+                </div>
+                
+            `;
+    }
+    mainContent.innerHTML = content;
+}
+   </script>
+   </body>
+  </html>
